@@ -1,0 +1,235 @@
+/* IMPORT GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+/* Variable settings */
+:root {
+    /* Font */
+    --font-body : 'Hanken Grotesk', sans-serif;
+    --font-medium : 500;
+    --font-bold : 700;
+    --font-extra-b: 800;
+
+    /* Font size*/
+    --size-p: 18px;
+
+    /* COLORS Primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsla(234, 85%, 45%);
+    --text: hsl(224, 30%, 27%);
+    --text-light: hsl(241, 100%, 89%);
+
+    /*Colors Pale*/
+    --pale-red: hsl(0, 100%, 67%, 0.1);
+    --pale-yellow: hsl(39, 100%, 56%, 0.1);
+    --pale-teal: hsl(166, 100%, 37%, 0.1);
+    --pale-blue: hsla(234, 85%, 45%, 0.1);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+body,
+button,
+input,textarea
+{
+    font-family: var(--font-body);
+    font-size: var(--size-p);
+}
+
+svg
+{
+    padding-right: 5px;
+}
+
+.card-container
+{
+    width: 42rem;
+    margin: 10% auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    box-shadow: 8px 9px 15px 5px #F4F5FC;
+    border-radius: 15px;
+}
+
+/* Your result */
+
+.result
+{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));  
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.title-result
+{
+    margin-bottom: 2rem;
+}
+
+.circul-result
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px; 
+    margin: 0 auto;
+    border-radius: 50%;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0)); 
+}
+
+.result-p
+{
+    font-size: 4rem;
+    font-weight: var(--font-extra-b);
+}
+
+.result-description
+{
+    margin: 1rem auto 0 auto;
+    width: 90%;
+    font-weight: var(--font-medium);
+}
+
+.result-description h3
+{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+/* SUMMARY */
+
+.summary
+{
+    padding: 2rem;
+}
+
+.container-summary
+{
+    margin: 2rem 0;
+}
+
+.box
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+}
+
+.title-box
+{
+    display: flex;
+    align-items: center;
+}
+
+.reaction
+{
+    background-color: var(--pale-red);
+    color: var(--Light-red);
+}
+
+.memory
+{
+    background-color: var(--pale-yellow);
+    color: var(--Orangey-yellow);
+}
+
+.verbal
+{
+    background-color: var(--pale-teal);
+    color: var(--Green-teal);
+}
+
+.visual
+{
+    background-color: var(--pale-blue);
+    color: var(--Cobalt-blue);
+}
+
+.score-p
+{
+    color: var(--text) ;
+    font-weight: var(--font-bold);
+}
+
+.for-100
+{
+    font-weight: var(--font-medium);
+}
+
+.btn-summary
+{
+    background-color: var(--text);
+    color: white;
+    width: 100%;
+    padding: 0.7rem 0;
+    border: solid 0;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 690px) {
+
+    *
+    {
+        overflow-y:auto;
+        overflow-x: auto;
+    }
+
+
+    .card-container
+    {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        font-size: 1rem;
+        flex-direction: column;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    /* RESULTA */
+
+    .result
+    {
+        border-radius: 0px 0 15px 15px;
+        padding: 1.5rem;
+    }
+
+    .circul-result
+    {
+        width: 100px;
+        height: 100px; 
+    }
+
+    .result-p
+    {
+        font-size: 2rem;
+        font-weight: var(--font-extra-b);
+    }
+
+    h2,h3 
+    {
+        font-size: 1.2rem;
+    }
+    
+    /* SUMMARY */
+    
+    .summary
+    {
+        padding: 1.5rem;
+    }
+}
